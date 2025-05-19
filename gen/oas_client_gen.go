@@ -28,7 +28,7 @@ func trimTrailingSlashes(u *url.URL) {
 type Invoker interface {
 	// RegisterPost invokes POST /register operation.
 	//
-	// Регистрация нового пользователя.
+	// Регистрирует нового пользователя по email и password.
 	//
 	// POST /register
 	RegisterPost(ctx context.Context, request *AuthData) (RegisterPostRes, error)
@@ -79,7 +79,7 @@ func (c *Client) requestURL(ctx context.Context) *url.URL {
 
 // RegisterPost invokes POST /register operation.
 //
-// Регистрация нового пользователя.
+// Регистрирует нового пользователя по email и password.
 //
 // POST /register
 func (c *Client) RegisterPost(ctx context.Context, request *AuthData) (RegisterPostRes, error) {

@@ -31,7 +31,7 @@ func (c *codeRecorder) WriteHeader(status int) {
 
 // handleRegisterPostRequest handles POST /register operation.
 //
-// Регистрация нового пользователя.
+// Регистрирует нового пользователя по email и password.
 //
 // POST /register
 func (s *Server) handleRegisterPostRequest(args [0]string, argsEscaped bool, w http.ResponseWriter, r *http.Request) {

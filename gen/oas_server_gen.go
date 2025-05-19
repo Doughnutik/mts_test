@@ -10,7 +10,7 @@ import (
 type Handler interface {
 	// RegisterPost implements POST /register operation.
 	//
-	// Регистрация нового пользователя.
+	// Регистрирует нового пользователя по email и password.
 	//
 	// POST /register
 	RegisterPost(ctx context.Context, req *AuthData) (RegisterPostRes, error)

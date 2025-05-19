@@ -7,6 +7,7 @@ paths:
   /register:
     post:
       summary: Регистрация нового пользователя
+      description: Регистрирует нового пользователя по email и password
       requestBody:
         required: true
         content:
